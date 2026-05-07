@@ -1,0 +1,24 @@
+# Next.js Directory Scraper — runtime dependencies
+# Install with: pip install -r requirements.txt
+
+# Browser automation (Selenium 4 uses CDP — no standalone chromedriver binary needed)
+selenium>=4.18.0,<5.0.0
+
+# Automatically downloads and manages the correct ChromeDriver version
+webdriver-manager>=4.0.0,<5.0.0
+
+# HTTP client for parallel profile page fetching
+requests>=2.31.0,<3.0.0
+
+# Excel output (.xlsx) — Data sheet + Summary sheet
+openpyxl>=3.1.2,<4.0.0
+
+# Cross-platform keyboard listener (P/R/Q/S controls)
+# Falls back gracefully to command.txt polling if pynput cannot initialise
+pynput>=1.7.6,<2.0.0
+
+# HTTP transport layer — pinned explicitly for SSL and retry reliability
+urllib3>=2.0.0,<3.0.0
+
+# Page-level progress bar — graceful no-op shim used if not installed
+tqdm>=4.65.0,<5.0.0

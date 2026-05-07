@@ -1,0 +1,84 @@
+# =============================================================================
+# Trustpilot Business Scraper — .gitignore
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+.installed.cfg
+MANIFEST
+
+# ---------------------------------------------------------------------------
+# Virtual environments
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------------
+# Pytest / coverage
+# ---------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.coveragerc
+
+# ---------------------------------------------------------------------------
+# IDE / editor
+# ---------------------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Scraper runtime files — never commit these
+# ---------------------------------------------------------------------------
+
+# Chrome profile built at launch — rebuilt fresh every run
+scraper_clean_profile/
+
+# Live checkpoint — contains scraped state mid-run
+scraper_checkpoint.json
+
+# Command file used for headless pause/resume/stop
+command.txt
+
+# Rotating log files
+*.log
+logs/
+
+# ---------------------------------------------------------------------------
+# Output files — scraped data belongs in a private store, not the repo
+# ---------------------------------------------------------------------------
+*.xlsx
+*.csv
+output/
+
+# ---------------------------------------------------------------------------
+# Ruff / linter caches
+# ---------------------------------------------------------------------------
+.ruff_cache/

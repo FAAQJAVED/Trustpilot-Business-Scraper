@@ -1,0 +1,98 @@
+{
+  "platform": {
+    "name":         "Trustpilot",
+    "base_url":     "https://www.trustpilot.com",
+    "search_path":  "/search",
+    "profile_path": "/review",
+    "source_label": "Trustpilot"
+  },
+
+  "query": {
+    "search_query": "Accountants in London",
+    "search_param": "query",
+    "extra_params": {}
+  },
+
+  "data_paths": {
+    "listing": {
+      "business_units":     "props.pageProps.businessUnits",
+      "pagination_results": "props.pageProps.pagination.totalResults",
+      "pagination_pages":   "props.pageProps.pagination.totalPages",
+      "slug_field":         "identifyingName",
+      "display_name":       "displayName"
+    },
+
+    "profile": {
+      "root":              "props.pageProps.businessUnit",
+      "contact_info_root": "contactInfo",
+      "email":             "contactInfo.email",
+      "phone":             "contactInfo.phone",
+      "website":           "websiteUrl",
+      "postcode":          "contactInfo.zipCode",
+      "city":              "contactInfo.city",
+      "trust_score":       "trustScore",
+      "reviews":           "numberOfReviews",
+      "categories":        "categories"
+    }
+  },
+
+  "cleaning": {
+    "phone_country_code":     "+44",
+    "phone_country_code_alt": "0044",
+    "phone_local_prefix":     "0",
+    "phone_min_digits":       10,
+    "phone_max_digits":       11,
+    "postcode_pattern":       "[A-Z]{1,2}[0-9]{1,2}[A-Z]?\\s+[0-9][A-Z]{2}"
+  },
+
+  "scraping": {
+    "profile_threads":      10,
+    "page_delay":           2.5,
+    "http_timeout_connect": 5,
+    "http_timeout_read":    8,
+    "hard_timeout":         12,
+    "retry_attempts":       3,
+    "retry_base_delay":     2.0,
+    "stop_at":              "",
+    "disk_min_mb":          500
+  },
+
+  "browser": {
+    "debug_port": 9222,
+    "chrome_paths": [
+      "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+      "/usr/bin/google-chrome",
+      "/usr/bin/google-chrome-stable",
+      "/usr/bin/chromium",
+      "/usr/bin/chromium-browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "/Applications/Chromium.app/Contents/MacOS/Chromium"
+    ]
+  },
+
+  "output": {
+    "filename_prefix": "Trustpilot",
+    "header_color":    "F06623",
+    "columns": [
+      "Company Name",
+      "Email",
+      "Phone",
+      "Website",
+      "Postcode",
+      "City",
+      "Trust Score",
+      "Reviews",
+      "Category",
+      "Source"
+    ],
+    "column_widths": [40, 35, 14, 42, 14, 20, 12, 10, 18, 14]
+  },
+
+  "http_headers": {
+    "User-Agent":      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept":          "text/html,application/xhtml+xml,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br"
+  }
+}
