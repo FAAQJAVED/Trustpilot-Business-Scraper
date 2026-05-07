@@ -15,7 +15,7 @@
 
 | Terminal — tqdm progress bar                                           | Excel Output                                                    |
 | ----------------------------------------------------------------------- | --------------------------------------------------------------- |
-| ![Terminal progress](https://claude.ai/chat/Assets/terminal_progress.png) | ![Excel output](https://claude.ai/chat/Assets/output_preview.png) |
+| ![Terminal progress](Assets/terminal_progress.png) | ![Excel output](Assets/output_preview.png) |
 
 ---
 
