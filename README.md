@@ -3,10 +3,10 @@
 **Production-grade Python scraper — extracts business contact data (email, phone, website, postcode, category) from any Trustpilot search query and saves to Excel.**
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://claude.ai/chat/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI](https://github.com/FAAQJAVED/trustpilot-business-scraper/actions/workflows/ci.yml/badge.svg)](https://github.com/FAAQJAVED/trustpilot-business-scraper/actions)
-[![Version](https://img.shields.io/badge/version-1.2.0-brightgreen)](https://claude.ai/chat/CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-121%20passing-brightgreen)](https://claude.ai/chat/tests/test_modules.py)
+[![Version](https://img.shields.io/badge/version-1.2.0-brightgreen)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-121%20passing-brightgreen)](tests/test_modules.py)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/FAAQJAVED/trustpilot-business-scraper)
 
 ---
@@ -61,16 +61,16 @@ It uses a hybrid architecture: **Selenium** reads JavaScript-rendered search res
 
 | Feature                                    | Detail                                                                                                                              |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Parallel profile fetching**        | `ThreadPoolExecutor`fetches all profiles on a page concurrently — configurable thread count, hard wall-clock timeout per request |
+| **Parallel profile fetching**        | `ThreadPoolExecutor` fetches all profiles on a page concurrently — configurable thread count, hard wall-clock timeout per request |
 | **Retry with exponential back-off**  | Failed HTTP requests retried up to N times with doubling delays — handles transient rate limiting gracefully                       |
-| **Checkpoint / resume**              | Progress saved to `scraper_checkpoint.json`after every page — re-run anytime to continue. Use `--fresh`to start over           |
+| **Checkpoint / resume**              | Progress saved to `scraper_checkpoint.json` after every page — re-run anytime to continue. Use `--fresh` to start over           |
 | **tqdm progress bar**                | Live page-level progress bar showing total pages, current page, and running record count. Graceful no-op shim if tqdm not installed |
-| **Cross-platform keyboard controls** | P=pause · R=resume · Q=quit · S=status via `pynput`. Falls back to `command.txt`polling if pynput is unavailable             |
+| **Cross-platform keyboard controls** | P=pause · R=resume · Q=quit · S=status via `pynput`. Falls back to `command.txt` polling if pynput is unavailable             |
 | **Structured file logging**          | Rotating log file alongside the Excel output — full audit trail for unattended or overnight runs                                   |
-| **Excel output + Summary sheet**     | Dated `.xlsx`with styled Data sheet and Summary sheet showing query, duration, record counts, and coverage percentages            |
+| **Excel output + Summary sheet**     | Dated `.xlsx` with styled Data sheet and Summary sheet showing query, duration, record counts, and coverage percentages            |
 | **Cycling detection**                | Stops cleanly if duplicate slug loops are detected (< 2 new results from ≥ 5 listings) — not a crash, it's a guard                |
-| **Audio completion feedback**        | `winsound`beep sequence on Windows when a run finishes — silently skipped on macOS/Linux                                         |
-| **`--stats`flag**                  | Print record counts from an existing output file and exit — no Chrome or Selenium required                                         |
+| **Audio completion feedback**        | `winsound` beep sequence on Windows when a run finishes — silently skipped on macOS/Linux                                         |
+| **`--stats` flag**                  | Print record counts from an existing output file and exit — no Chrome or Selenium required                                         |
 | **Config-driven**                    | Zero Trustpilot-specific strings in Python code — every field path, URL, and cleaning rule lives in `config.json`                |
 
 ---
@@ -108,7 +108,7 @@ One row per business. Here is a real example from a live Trustpilot search:
 | Category     | Real Estate Agency           |
 | Source       | Trustpilot                   |
 
-See [`Assets/sample_output.csv`](https://claude.ai/chat/Assets/sample_output.csv) for 10 rows of realistic sample output.
+See [`Assets/sample_output.csv`](Assets/sample_output.csv) for 10 rows of realistic sample output.
 
 ---
 
@@ -130,7 +130,7 @@ Open `config.json` and update the `search_query` field:
 }
 ```
 
-See [docs/finding_your_search_query.md](https://claude.ai/chat/docs/finding_your_search_query.md) for tips on choosing a good query.
+See [docs/finding_your_search_query.md](docs/finding_your_search_query.md) for tips on choosing a good query.
 
 ### 3. Run
 
@@ -156,7 +156,7 @@ The Trustpilot search term to scrape. Override at runtime with `--query` without
 | ------------------- | ------- | ------------------------------------------------------------- |
 | `profile_threads` | `10`  | Parallel HTTP threads per page                                |
 | `page_delay`      | `2.5` | Seconds between page loads                                    |
-| `stop_at`         | `""`  | Auto-stop time in `HH:MM`format (empty = run to completion) |
+| `stop_at`         | `""`  | Auto-stop time in `HH:MM` format (empty = run to completion) |
 
 ### `browser.chrome_paths`
 
@@ -200,8 +200,8 @@ While running, use these keys (requires `pynput`) or write commands to `command.
 
 | Flag                | Description                                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
-| `--query TEXT`    | Override `search_query`from `config.json`for this run                       |
-| `--threads N`     | Override `profile_threads`(parallel HTTP workers)                             |
+| `--query TEXT`    | Override `search_query` from `config.json` for this run                       |
+| `--threads N`     | Override `profile_threads` (parallel HTTP workers)                             |
 | `--fresh`         | Discard any existing checkpoint and start from page 1                           |
 | `--resume`        | Explicitly resume from checkpoint (default behaviour)                           |
 | `--stop-at HH:MM` | Auto-quit at a specific time of day                                             |
