@@ -8,8 +8,8 @@ Thank you for your interest in contributing to the Next.js Directory Scraper. Co
 
 ```bash
 # 1. Fork the repository on GitHub, then clone your fork
-git clone https://github.com/YOUR_USERNAME/nextjs-directory-scraper.git
-cd nextjs-directory-scraper
+git clone https://github.com/FAAQJAVED/Trustpilot-Business-Scraper.git
+cd Trustpilot-Business-Scraper
 
 # 2. Install dev dependencies (pytest, ruff, pytest-cov)
 pip install -r requirements-dev.txt
