@@ -61,16 +61,16 @@ It uses a hybrid architecture: **Selenium** reads JavaScript-rendered search res
 
 | Feature                                    | Detail                                                                                                                              |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Parallel profile fetching**        | `ThreadPoolExecutor` fetches all profiles on a page concurrently — configurable thread count, hard wall-clock timeout per request |
+| **Parallel profile fetching**        | `ThreadPoolExecutor`fetches all profiles on a page concurrently — configurable thread count, hard wall-clock timeout per request |
 | **Retry with exponential back-off**  | Failed HTTP requests retried up to N times with doubling delays — handles transient rate limiting gracefully                       |
-| **Checkpoint / resume**              | Progress saved to `scraper_checkpoint.json` after every page — re-run anytime to continue. Use `--fresh` to start over           |
+| **Checkpoint / resume**              | Progress saved to `scraper_checkpoint.json`after every page — re-run anytime to continue. Use `--fresh`to start over           |
 | **tqdm progress bar**                | Live page-level progress bar showing total pages, current page, and running record count. Graceful no-op shim if tqdm not installed |
-| **Cross-platform keyboard controls** | P=pause · R=resume · Q=quit · S=status via `pynput`. Falls back to `command.txt` polling if pynput is unavailable             |
+| **Cross-platform keyboard controls** | P=pause · R=resume · Q=quit · S=status via `pynput`. Falls back to `command.txt`polling if pynput is unavailable             |
 | **Structured file logging**          | Rotating log file alongside the Excel output — full audit trail for unattended or overnight runs                                   |
-| **Excel output + Summary sheet**     | Dated `.xlsx` with styled Data sheet and Summary sheet showing query, duration, record counts, and coverage percentages            |
+| **Excel output + Summary sheet**     | Dated `.xlsx`with styled Data sheet and Summary sheet showing query, duration, record counts, and coverage percentages            |
 | **Cycling detection**                | Stops cleanly if duplicate slug loops are detected (< 2 new results from ≥ 5 listings) — not a crash, it's a guard                |
-| **Audio completion feedback**        | `winsound` beep sequence on Windows when a run finishes — silently skipped on macOS/Linux                                         |
-| **`--stats` flag**                  | Print record counts from an existing output file and exit — no Chrome or Selenium required                                         |
+| **Audio completion feedback**        | `winsound`beep sequence on Windows when a run finishes — silently skipped on macOS/Linux                                         |
+| **`--stats`flag**                  | Print record counts from an existing output file and exit — no Chrome or Selenium required                                         |
 | **Config-driven**                    | Zero Trustpilot-specific strings in Python code — every field path, URL, and cleaning rule lives in `config.json`                |
 
 ---
@@ -156,7 +156,7 @@ The Trustpilot search term to scrape. Override at runtime with `--query` without
 | ------------------- | ------- | ------------------------------------------------------------- |
 | `profile_threads` | `10`  | Parallel HTTP threads per page                                |
 | `page_delay`      | `2.5` | Seconds between page loads                                    |
-| `stop_at`         | `""`  | Auto-stop time in `HH:MM` format (empty = run to completion) |
+| `stop_at`         | `""`  | Auto-stop time in `HH:MM`format (empty = run to completion) |
 
 ### `browser.chrome_paths`
 
@@ -200,8 +200,8 @@ While running, use these keys (requires `pynput`) or write commands to `command.
 
 | Flag                | Description                                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
-| `--query TEXT`    | Override `search_query` from `config.json` for this run                       |
-| `--threads N`     | Override `profile_threads` (parallel HTTP workers)                             |
+| `--query TEXT`    | Override `search_query`from `config.json`for this run                       |
+| `--threads N`     | Override `profile_threads`(parallel HTTP workers)                             |
 | `--fresh`         | Discard any existing checkpoint and start from page 1                           |
 | `--resume`        | Explicitly resume from checkpoint (default behaviour)                           |
 | `--stop-at HH:MM` | Auto-quit at a specific time of day                                             |
@@ -249,6 +249,8 @@ trustpilot-business-scraper/
 │   └── sample_output.csv       # 10 rows of realistic sample data
 ├── docs/
 │   └── finding_your_search_query.md
+├── configs/
+│   └── README.md                   ← reserved for future query presets
 ├── tests/
 │   └── test_modules.py     # 121 tests — pytest
 └── modules/
@@ -280,10 +282,10 @@ trustpilot-business-scraper/
 
 | Repo                                                                                                             | What it does                                                |
 | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| **[Trustpilot Business Scraper](https://github.com/FAAQJAVED/trustpilot-business-scraper)**←*you are here* | Extracts business listings from Trustpilot search results   |
+| **[Trustpilot Business Scraper](https://github.com/FAAQJAVED/trustpilot-business-scraper)** ← *you are here* | Extracts business listings from Trustpilot search results   |
 | **[Google Maps Business Scraper](https://github.com/FAAQJAVED/Google-Maps-Business-Scraper)**                 | Extracts and enriches business listings from Google Maps    |
 | **[Email Phone Enrichment Tool](https://github.com/FAAQJAVED/Email-Phone-Number-Enrichment-Tool)**            | Scrapes contact emails and phones from company websites     |
-| **[LeadHunter Pro](https://github.com/FAAQJAVED/leadhunter-pro)**                                             | Multi-engine search scraper with HOT/WARM/COLD lead scoring |
+| **[LeadHunter Pro](https://github.com/FAAQJAVED/Leadhunter_Pro)**                                             | Multi-engine search scraper with HOT/WARM/COLD lead scoring |
 
 All four tools share the same Excel output schema (Data + Summary sheets) — results can be combined directly in Excel or imported together into a CRM.
 
