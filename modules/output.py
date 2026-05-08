@@ -118,9 +118,7 @@ def save_xlsx(
         # ── Atomic write ──────────────────────────────────────────
         wb.save(tmp_path)
 
-        if os.path.exists(path):
-            os.remove(path)
-        os.rename(tmp_path, path)
+        os.replace(tmp_path, path)  # atomic on POSIX and Windows
 
         logger.debug(f"Saved {len(rows)} rows → {os.path.basename(path)}")
 
