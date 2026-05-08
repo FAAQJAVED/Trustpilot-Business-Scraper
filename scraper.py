@@ -803,7 +803,6 @@ def main() -> None:
         return
 
     current_url   = driver.current_url
-    expected_base = cfg["platform"]["base_url"].replace("https://www.", "https://")
     log.info(f"Connected — current URL: {current_url}")
 
     if cfg["platform"]["base_url"].replace("https://", "").replace("www.", "") \
