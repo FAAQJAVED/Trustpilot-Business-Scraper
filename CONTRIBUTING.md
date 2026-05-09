@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to the Next.js Directory Scraper. Contributions are welcome and appreciated — especially new platform configs, bug fixes, and additional test cases. This document explains how to get set up and what is open for contribution.
+Thank you for your interest in contributing to the Trustpilot Business Scraper. Contributions are welcome and appreciated — especially new platform configs, bug fixes, and additional test cases. This document explains how to get set up and what is open for contribution.
 
 ---
 
@@ -44,13 +44,13 @@ Tests are pure-function only. They do not start a browser, make network calls, o
 
 ## What Contributions Are Welcome
 
-**New platform configs** in `configs/` are the most valuable contribution. If you have verified `__NEXT_DATA__` paths for a Next.js business directory that is not yet included, add a `configs/yourplatform.json` file. Follow the structure of `configs/trustpilot.json` and add `_comment` fields explaining any platform-specific choices. See [docs/adapting_to_new_platform.md](docs/adapting_to_new_platform.md) for the full guide.
+**New platform configs** in `configs/` are the most valuable contribution. If you have verified `__NEXT_DATA__` paths for a Next.js business directory that is not yet included, add a `configs/yourplatform.json` file. Use `config.json` in the project root as your structural reference and add `_comment` fields explaining any platform-specific choices.
 
 **Bug fixes** are welcome for any of the Python modules. If you find a case where `resolve_path()`, phone normalisation, or checkpoint handling behaves unexpectedly, open an issue first describing the input and expected output, then submit a fix with a corresponding regression test.
 
 **New test cases** are always welcome. If you find an edge case that is not currently covered in `tests/test_modules.py`, add it. Follow the existing test class structure (one class per function, one method per case with a descriptive name).
 
-**Documentation improvements** — corrections, clarifications, and additional troubleshooting entries in `docs/adapting_to_new_platform.md` or `README.md` are welcome.
+**Documentation improvements** — corrections, clarifications, and additional troubleshooting entries in `README.md` or `docs/finding_your_search_query.md` are welcome.
 
 ---
 
@@ -68,7 +68,7 @@ In particular:
 
 ## How to Add a Platform Config
 
-1. Read [docs/adapting_to_new_platform.md](docs/adapting_to_new_platform.md) in full.
+1. Review `config.json` in the project root as your structural reference — it contains all field paths and settings for Trustpilot.
 2. Create `configs/yourplatform.json` — copy `config.example.json` as your starting point.
 3. Replace all `YOUR_*` placeholders with real values.
 4. Add `_comment` fields where the config makes platform-specific choices.
