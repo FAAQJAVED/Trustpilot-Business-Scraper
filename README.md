@@ -293,4 +293,4 @@ All four tools share the same Excel output schema (Data + Summary sheets) — re
 
 ## License
 
-MIT — free to use, modify, and distribute.
+MIT © 2026 [FAAQJAVED](https://github.com/FAAQJAVED) — see [LICENSE](LICENSE)
