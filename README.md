@@ -5,10 +5,10 @@
 > **⚠️ Not a review scraper.** This tool extracts business *contact data* — email, phone, website, postcode — from Trustpilot *search results* for B2B lead generation. If you need Trustpilot review text, star ratings, or sentiment data, this is the wrong repo.
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://claude.ai/chat/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![CI](https://github.com/FAAQJAVED/trustpilot-business-scraper/actions/workflows/ci.yml/badge.svg)](https://github.com/FAAQJAVED/trustpilot-business-scraper/actions)
-[![Version](https://img.shields.io/badge/version-1.2.0-brightgreen)](https://claude.ai/chat/CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/tests-121%20passing-brightgreen)](https://claude.ai/chat/tests/test_modules.py)
+[![Version](https://img.shields.io/badge/version-1.2.0-brightgreen)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/tests-121%20passing-brightgreen)](tests/test_modules.py)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/FAAQJAVED/trustpilot-business-scraper)
 
 > Found this useful? A ⭐ on GitHub helps other developers find it.
@@ -17,23 +17,23 @@
 
 ## Table of Contents
 
-* [Preview](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#preview)
-* [What It Does](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#what-it-does)
-* [Use Cases](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#use-cases)
-* [How It Works](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#how-it-works)
-* [Features](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#features)
-* [Performance](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#performance)
-* [What Data You Get](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#what-data-you-get)
-* [Quick Start](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#quick-start)
-* [Configuration](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#configuration)
-* [Usage](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#usage)
-* [CLI Reference](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#cli-reference)
-* [Output](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#output)
-* [Tech Stack](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#tech-stack)
-* [Project Structure](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#project-structure)
-* [Troubleshooting](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#troubleshooting)
-* [B2B Lead Toolkit](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#part-of-the-b2b-lead-toolkit)
-* [License](https://claude.ai/chat/db5cacdc-a2ff-4268-bb9c-daa595946c1d#license)
+- [Preview](#preview)
+- [What It Does](#what-it-does)
+- [Use Cases](#use-cases)
+- [How It Works](#how-it-works)
+- [Features](#features)
+- [Performance](#performance)
+- [What Data You Get](#what-data-you-get)
+- [Quick Start](#quick-start)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [CLI Reference](#cli-reference)
+- [Output](#output)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Troubleshooting](#troubleshooting)
+- [B2B Lead Toolkit](#part-of-the-b2b-lead-toolkit)
+- [License](#license)
 
 ---
 
@@ -41,7 +41,7 @@
 
 | Terminal — tqdm progress bar                                           | Excel Output                                                    |
 | ----------------------------------------------------------------------- | --------------------------------------------------------------- |
-| ![Terminal progress](https://claude.ai/chat/Assets/terminal_progress.png) | ![Excel output](https://claude.ai/chat/Assets/output_preview.png) |
+| ![Terminal progress](Assets/terminal_progress.png) | ![Excel output](Assets/output_preview.png) |
 
 ---
 
@@ -55,14 +55,14 @@ It uses a hybrid architecture: **Selenium** reads JavaScript-rendered search res
 
 ## Use Cases
 
-| Who uses it                  | What they do                                                                                                                      |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Sales teams**        | Build targeted outreach lists —`"accountants in Manchester"`→ 200+ verified businesses with email and phone in one Excel file |
-| **Marketing agencies** | Deliver fresh, structured prospect data for any UK or EU industry vertical without paying a data provider                         |
-| **Market researchers** | Map an entire service category in a city in minutes — trust scores, review counts, and contact data in one sheet                 |
-| **CRM admins**         | Enrich and validate existing contact records against live Trustpilot data                                                         |
-| **Recruiters**         | Identify hiring employers in a target sector and geography using trust score as a company health signal                           |
-| **Freelance lead gen** | Run overnight scrapes for clients and deliver clean Excel files ready to import into any CRM                                      |
+| Who uses it | What they do |
+|---|---|
+| **Sales teams** | Build targeted outreach lists — `"accountants in Manchester"` → 200+ verified businesses with email and phone in one Excel file |
+| **Marketing agencies** | Deliver fresh, structured prospect data for any UK or EU industry vertical without paying a data provider |
+| **Market researchers** | Map an entire service category in a city in minutes — trust scores, review counts, and contact data in one sheet |
+| **CRM admins** | Enrich and validate existing contact records against live Trustpilot data |
+| **Recruiters** | Identify hiring employers in a target sector and geography using trust score as a company health signal |
+| **Freelance lead gen** | Run overnight scrapes for clients and deliver clean Excel files ready to import into any CRM |
 
 ---
 
@@ -147,7 +147,7 @@ One row per business. Here is a real example from a live Trustpilot search:
 | Category     | Real Estate Agency           |
 | Source       | Trustpilot                   |
 
-See [`Assets/sample_output.csv`](https://claude.ai/chat/Assets/sample_output.csv) for 10 rows of realistic sample output.
+See [`Assets/sample_output.csv`](Assets/sample_output.csv) for 10 rows of realistic sample output.
 
 ---
 
@@ -169,7 +169,7 @@ Open `config.json` and update the `search_query` field:
 }
 ```
 
-See [docs/finding_your_search_query.md](https://claude.ai/chat/docs/finding_your_search_query.md) for tips on choosing a good query.
+See [docs/finding_your_search_query.md](docs/finding_your_search_query.md) for tips on choosing a good query.
 
 ### 3. Run
 
@@ -239,9 +239,9 @@ While running, use these keys (requires `pynput`) or write commands to `command.
 
 | Flag                | Description                                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
-| `--query TEXT`    | Override `search_query`from `config.json`for this run                       |
-| `--config FILE`   | Use a different config file instead of `config.json`                          |
-| `--threads N`     | Override `profile_threads`(parallel HTTP workers)                             |
+| `--query TEXT`    | Override `search_query` from `config.json` for this run                        |
+| `--config FILE`   | Use a different config file instead of `config.json`                            |
+| `--threads N`     | Override `profile_threads` (parallel HTTP workers)                              |
 | `--fresh`         | Discard any existing checkpoint and start from page 1                           |
 | `--resume`        | Explicitly resume from checkpoint (default behaviour)                           |
 | `--stop-at HH:MM` | Auto-quit at a specific time of day                                             |
@@ -322,7 +322,7 @@ trustpilot-business-scraper/
 
 | Repo                                                                                                             | What it does                                                |
 | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| **[Trustpilot Business Scraper](https://github.com/FAAQJAVED/trustpilot-business-scraper)**←*you are here* | Extracts business listings from Trustpilot search results   |
+| **[Trustpilot Business Scraper](https://github.com/FAAQJAVED/trustpilot-business-scraper)** ← *you are here* | Extracts business listings from Trustpilot search results   |
 | **[Google Maps Business Scraper](https://github.com/FAAQJAVED/Google-Maps-Business-Scraper)**                 | Extracts and enriches business listings from Google Maps    |
 | **[Email Phone Enrichment Tool](https://github.com/FAAQJAVED/Email-Phone-Number-Enrichment-Tool)**            | Scrapes contact emails and phones from company websites     |
 | **[LeadHunter Pro](https://github.com/FAAQJAVED/Leadhunter_Pro)**                                             | Multi-engine search scraper with HOT/WARM/COLD lead scoring |
@@ -333,4 +333,4 @@ All four tools share the same Excel output schema (Data + Summary sheets) — re
 
 ## License
 
-MIT © 2026 [FAAQJAVED](https://github.com/FAAQJAVED) — see [LICENSE](https://claude.ai/chat/LICENSE)
+MIT © 2026 [FAAQJAVED](https://github.com/FAAQJAVED) — see [LICENSE](LICENSE)
