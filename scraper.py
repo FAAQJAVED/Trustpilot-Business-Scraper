@@ -1,8 +1,9 @@
 """
-scraper.py — Next.js Directory Scraper (Entry Point)
-=====================================================
-A generic, config-driven scraper for any website that serves its business
-listing data via Next.js __NEXT_DATA__ JSON.
+scraper.py — Trustpilot Business Scraper (Entry Point)
+======================================================
+A production-grade, config-driven scraper for Trustpilot — extracts business
+contact data (email, phone, website, postcode, category) from any search query
+and saves to a dated Excel file with Data + Summary sheets.
 
 Architecture overview:
   Browser (Selenium)  — reads JS-rendered search result pages from the DOM
