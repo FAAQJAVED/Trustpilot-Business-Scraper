@@ -119,13 +119,13 @@ def build_arg_parser() -> argparse.ArgumentParser:
     CLI flags override the corresponding config.json values at runtime.
     """
     p = argparse.ArgumentParser(
-        description="Generic Next.js directory scraper.",
+        description="Trustpilot Business Scraper — extracts business contact data from any Trustpilot search query.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
             "Examples:\n"
             "  python scraper.py\n"
             "  python scraper.py --query 'dentists in berlin' --threads 8\n"
-            "  python scraper.py --config platforms/yelp.json --fresh\n"
+            "  python scraper.py --config configs/yourplatform.json --fresh\n"
             "  python scraper.py --stop-at 23:00\n"
         ),
     )
