@@ -1,7 +1,7 @@
 """
 tests/test_modules.py
 =====================
-Pure-function unit tests for the Next.js Directory Scraper modules.
+Pure-function unit tests for the Trustpilot Business Scraper modules.
 
 All tests run without any network calls, browser processes, or Selenium.
 Complete suite runs in under 5 seconds on any machine.
