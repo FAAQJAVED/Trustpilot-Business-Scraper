@@ -10,7 +10,12 @@ authors         = [{name = "Afaq", email = ""}]
 requires-python = ">=3.10"
 readme          = "README.md"
 license         = {text = "MIT"}
-keywords        = ["trustpilot", "scraper", "business-directory", "lead-generation", "web-scraping"]
+keywords        = [
+    "trustpilot", "scraper", "trustpilot-scraper", "business-directory",
+    "lead-generation", "web-scraping", "email-scraper", "contact-data",
+    "b2b-leads", "python-scraper", "selenium", "next-js-scraper",
+    "excel-export", "data-extraction", "business-leads"
+]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
