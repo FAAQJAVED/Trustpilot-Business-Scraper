@@ -55,6 +55,7 @@ It uses a hybrid architecture: **Selenium** reads JavaScript-rendered search res
 
 ## Use Cases
 
+<<<<<<< HEAD
 | Who uses it | What they do | Example query |
 |---|---|---|
 | **Sales teams** | Build targeted outreach lists from any UK or EU industry vertical | `"accountants in Manchester"` → 200+ verified businesses |
@@ -63,6 +64,16 @@ It uses a hybrid architecture: **Selenium** reads JavaScript-rendered search res
 | **CRM admins** | Enrich and validate existing contact records against live Trustpilot data | Any query → fills email/phone gaps in existing CRM records |
 | **Recruiters** | Identify hiring employers using trust score as a company health signal | `"recruitment agencies in Bristol"` → phone + website |
 | **Freelance lead gen** | Run overnight scrapes and deliver clean Excel files for any client | Any query → dated Excel file, ready to import into any CRM |
+=======
+| Who uses it | What they do |
+|---|---|
+| **Sales teams** | Build targeted outreach lists — `"accountants in Manchester"` → 200+ verified businesses with email and phone in one Excel file |
+| **Marketing agencies** | Deliver fresh, structured prospect data for any UK or EU industry vertical without paying a data provider |
+| **Market researchers** | Map an entire service category in a city in minutes — trust scores, review counts, and contact data in one sheet |
+| **CRM admins** | Enrich and validate existing contact records against live Trustpilot data |
+| **Recruiters** | Identify hiring employers in a target sector and geography using trust score as a company health signal |
+| **Freelance lead gen** | Run overnight scrapes for clients and deliver clean Excel files ready to import into any CRM |
+>>>>>>> f62fc65677c5512ee1a8f55221eaa3ac884dba60
 
 ---
 
