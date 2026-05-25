@@ -327,8 +327,9 @@ trustpilot-business-scraper/
 | **[Email Phone Enrichment Tool](https://github.com/FAAQJAVED/Email-Phone-Number-Enrichment-Tool)**            | Scrapes contact emails and phones from company websites     |
 | **[LeadHunter Pro](https://github.com/FAAQJAVED/Leadhunter_Pro)**                                             | Multi-engine search scraper with HOT/WARM/COLD lead scoring |
 | **[JSON Directory Harvester](https://github.com/FAAQJAVED/json-directory-harvester)**                         | Configurable harvester for any JSON directory API with geo-filtering |
+| **[HTML Directory Scrapers](https://github.com/FAAQJAVED/html-directory-scrapers)** | Two-engine toolkit for HTML and WordPress AJAX directories |
 
-All five tools share the same Excel output schema (Data + Summary sheets) — results can be combined directly in Excel or imported together into a CRM.
+All six tools share the same Excel output schema (Data + Summary sheets) — results can be combined directly in Excel or imported together into a CRM.
 
 ---
 
